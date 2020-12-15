@@ -17,6 +17,9 @@
                     Data : {{ Carbon\Carbon::parse($content->created_at)->format('d/m/Y - H:m:s')  }} hrs
                 </p>
                 <p>
+                    Médico : {{ $content->whoInserted[0]['name'] }}
+                </p>
+                <p>
                     Titulo : {{ $content->title }}
                 </p>
                 <p>
