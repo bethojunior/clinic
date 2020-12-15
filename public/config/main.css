@@ -2,9 +2,9 @@
     position: relative!important;
 }
 [class*=sidebar-dark-] {
-    background-color: #C04B66!important;
+    background-color: #093F6D!important;
 }
 .sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
-    background-color: #a33a51!important;
+    background-color: #093F6D!important;
     color: #fff!important;
 }
