@@ -16,6 +16,7 @@ class CreateTimelinesTable extends Migration
         Schema::create('timelines', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
+            $table->integer('who_inserted');
             $table->longText('title');
             $table->longText('description');
             $table->longText('procedure');

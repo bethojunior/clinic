@@ -20,6 +20,17 @@
             <label>CPF / RG</label>
             <input required type="text" name="document" class="form-control">
         </div>
+
+        <div class="form-group col-lg-4 col-sm-12">
+            <label for="exampleFormControlSelect1">Tipo de usuário</label>
+            <select required name="user_type_id" class="form-control" id="exampleFormControlSelect1">
+                <option value="">Esolha o tipo do usuário</option>
+                <option value="{{ \App\Constants\UserConstant::DOCTOR }}">Médico</option>
+                <option value="{{ \App\Constants\UserConstant::ADMIN }}">Administrador</option>
+                <option value="{{ \App\Constants\UserConstant::PATIENT }}">Paciente</option>
+            </select>
+        </div>
+
         <div class="form-group col-lg-4 col-sm-12">
             <label>Alergia</label>
             <input type="text" name="allergy" class="form-control">
@@ -42,14 +53,7 @@
             <input required type="text" name="password" class="form-control">
         </div>
 
-        <div class="form-group col-lg-4 col-sm-12">
-            <label for="exampleFormControlSelect1">Tipo de usuário</label>
-            <select required name="user_type_id" class="form-control" id="exampleFormControlSelect1">
-                <option value="">Esolha o tipo do usuário</option>
-                <option value="{{ \App\Constants\UserConstant::PACIENTE }}">Paciente</option>
-                <option value="{{ \App\Constants\UserConstant::ADMIN }}">Administrador</option>
-            </select>
-        </div>
+
         <div class="col-lg-12 col-sm-12">
             <input type="submit" class="btn btn-outline-info" value="Salvar">
         </div>

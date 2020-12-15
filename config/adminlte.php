@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Madgic</b> Gerenciamento para clinicas',
+    'logo' => '<b>Madgic</b>',
     'logo_img' => 'assets/images/logo/logo.png',
     'logo_img_class' => 'brand-image img-circle elevatjpegion-3',
     'logo_img_xl' => null,

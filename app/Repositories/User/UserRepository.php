@@ -35,7 +35,7 @@ class UserRepository extends AbstractRepository
     public function findAllPatients(){
         return $this->getModel()
             ::with('userStatus')
-            ->where('user_type_id','=',UserConstant::PACIENTE)
+            ->where('user_type_id','=',UserConstant::PATIENT)
             ->get();
     }
 
@@ -45,7 +45,7 @@ class UserRepository extends AbstractRepository
     public function CountAllPatients(){
         return $this->getModel()
             ::with('userStatus')
-            ->where('user_type_id','=',UserConstant::PACIENTE)
+            ->where('user_type_id','=',UserConstant::PATIENT)
             ->count();
     }
 

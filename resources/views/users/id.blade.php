@@ -32,7 +32,9 @@
 
                 <option @if ($user->user_type_id == \App\Constants\UserConstant::ADMIN ) selected @endif value="{{ \App\Constants\UserConstant::ADMIN }}">Admin</option>
 
-                <option @if ($user->user_type_id == \App\Constants\UserConstant::PACIENTE ) selected @endif  value="{{ \App\Constants\UserConstant::PACIENTE }}">Paciente</option>
+                <option @if ($user->user_type_id == \App\Constants\UserConstant::PATIENT ) selected @endif  value="{{ \App\Constants\UserConstant::PATIENT }}">Paciente</option>
+
+                <option @if ($user->user_type_id == \App\Constants\UserConstant::DOCTOR ) selected @endif  value="{{ \App\Constants\UserConstant::DOCTOR }}">Médico</option>
             </select>
         </div>
         <div class="col-lg-12 col-sm-12">

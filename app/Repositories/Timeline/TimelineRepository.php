@@ -22,9 +22,23 @@ class TimelineRepository extends AbstractRepository
     {
         return $this->getModel()
             ::with('user')
+            ->with('whoInserted')
             ->where('user_id','=',$id)
             ->orderByDesc('id')
             ->get();
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model[]
+     */
+    public function getAll()
+    {
+        return $this->getModel()
+            ::with('user')
+            ->with('whoInserted')
+            ->orderByDesc('id')
+            ->get();
+    }
+
 
 }

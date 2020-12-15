@@ -44,13 +44,25 @@ class HomeController extends Controller
                 );
         }
 
-        return view('patient.profile')
-            ->with
-            (
-                [
-                    'user' => $user
-                ]
-            );
+        if($user->user_type_id === UserConstant::DOCTOR){
+            return view('home.home')
+                ->with
+                (
+                    [
+                        'patients' => $patients
+                    ]
+                );
+        }
+
+        if($user->user_type_id === UserConstant::PATIENT){
+            return view('patient.profile')
+                ->with
+                (
+                    [
+                        'user' => $user
+                    ]
+                );
+        }
 
 
     }

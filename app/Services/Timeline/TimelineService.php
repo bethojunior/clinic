@@ -8,6 +8,7 @@ use App\Constants\SalesStatus;
 use App\Models\Sales\Sales;
 use App\Models\Timeline\Timeline;
 use App\Repositories\Timeline\TimelineRepository;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class TimelineService
@@ -33,10 +34,10 @@ class TimelineService
     {
         try{
             DB::beginTransaction();
-
+            $user = Auth::user();
+            $request['who_inserted'] = $user->id;
             $timeline = new Timeline($request);
             $timeline->save();
-
             DB::commit();
 
         }catch (\Exception $exception){
