@@ -28,7 +28,7 @@ class MountOptionsNavProvider extends ServiceProvider
     {
         $events->listen(BuildingMenu::class, function (BuildingMenu $event) {
             $user = Auth::user();
-            if($user->user_type_id === UserConstant::ADMIN){
+            if($user->user_type_id === UserConstant::ADMIN || $user->user_type_id === UserConstant::DOCTOR){
                 $event->menu->add(
                     [
                         'text' => 'search',

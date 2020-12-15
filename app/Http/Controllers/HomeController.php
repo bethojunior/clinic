@@ -34,7 +34,7 @@ class HomeController extends Controller
 
         $user = Auth::user();
 
-        if($user->user_type_id === UserConstant::ADMIN){
+        if($user->user_type_id === UserConstant::ADMIN || $user->user_type_id === UserConstant::DOCTOR ){
             return view('home.home')
                 ->with
                 (
@@ -43,26 +43,15 @@ class HomeController extends Controller
                     ]
                 );
         }
+        
+        return view('patient.profile')
+            ->with
+            (
+                [
+                    'user' => $user
+                ]
+            );
 
-        if($user->user_type_id === UserConstant::DOCTOR){
-            return view('home.home')
-                ->with
-                (
-                    [
-                        'patients' => $patients
-                    ]
-                );
-        }
-
-        if($user->user_type_id === UserConstant::PATIENT){
-            return view('patient.profile')
-                ->with
-                (
-                    [
-                        'user' => $user
-                    ]
-                );
-        }
 
 
     }
