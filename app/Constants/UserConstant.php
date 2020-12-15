@@ -7,5 +7,6 @@ namespace App\Constants;
 class UserConstant
 {
     const ADMIN     = 1;
-    const PACIENTE  = 2;
+    const PATIENT   = 2;
+    const DOCTOR    = 3;
 }
