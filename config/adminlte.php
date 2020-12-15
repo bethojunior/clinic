@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Sistema de gerenciamento de pacientes',
+    'title' => 'Madgic',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>Dra</b> Jessyca',
+    'logo' => '<b>Madgic</b> Gerenciamento para clinicas',
     'logo_img' => 'assets/images/logo/logo.png',
     'logo_img_class' => 'brand-image img-circle elevatjpegion-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'DraJessyca',
+    'logo_img_alt' => 'Madgic',
 
     /*
     |--------------------------------------------------------------------------
