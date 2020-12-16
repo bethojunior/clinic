@@ -49,5 +49,15 @@ class UserRepository extends AbstractRepository
             ->count();
     }
 
+    /**
+     * @return int
+     */
+    public function CountAllDoctors(){
+        return $this->getModel()
+            ::with('userStatus')
+            ->where('user_type_id','=',UserConstant::DOCTOR)
+            ->count();
+    }
+
 
 }

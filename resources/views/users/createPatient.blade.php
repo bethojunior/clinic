@@ -30,7 +30,7 @@
         </div>
 
         <div class="form-group col-lg-4 col-sm-12">
-            <label>Alergia</label>
+            <label>Alergias</label>
             <input type="text" name="allergy" class="form-control">
         </div>
         <div class="form-group col-lg-4 col-sm-12">
@@ -38,7 +38,7 @@
             <input required type="date" name="was_born_in" class="form-control">
         </div>
         <div class="form-group col-lg-2 col-sm-12">
-            <label>Tipo sanguinio</label>
+            <label>Tipo sanguíneo</label>
             <input type="text" name="blood" class="form-control">
         </div>
         <div class="form-group col-lg-2 col-sm-12">

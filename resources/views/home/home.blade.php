@@ -9,8 +9,14 @@
     <link rel="stylesheet" href="{{ asset('css/home/init.css') }}">
 
     <div class="row col-lg-12 col-sm-12">
+        <div class="card text-white bg-gradient-lightblue mb-3 col-lg-3 col-sm-12 mr-1">
+            <div class="card-header center">Quantidade de médicos</div>
+            <div class="card-body center">
+                <h5 class="card-title"> {{ $doctors }} </h5>
+            </div>
+        </div>
         <div class="card text-white bg-info mb-3 col-lg-3 col-sm-12">
-            <div class="card-header center">Quantidade de clientes</div>
+            <div class="card-header center">Quantidade de pacientes</div>
             <div class="card-body center">
                 <h5 class="card-title"> {{ $patients }} </h5>
             </div>

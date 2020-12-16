@@ -31,6 +31,8 @@ class HomeController extends Controller
 
         $patients = $this->userService
             ->countAllPatients();
+        $doctors = $this->userService
+            ->countAllDoctors();
 
         $user = Auth::user();
 
@@ -39,7 +41,8 @@ class HomeController extends Controller
                 ->with
                 (
                     [
-                        'patients' => $patients
+                        'patients' => $patients,
+                        'doctors'  => $doctors
                     ]
                 );
         }

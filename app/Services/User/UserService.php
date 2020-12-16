@@ -47,6 +47,13 @@ class UserService
     }
 
     /**
+     * @return int
+     */
+    public function countAllDoctors(){
+        return $this->repository->CountAllDoctors();
+    }
+
+    /**
      * @param array $request
      * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model|null
      */
