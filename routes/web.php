@@ -17,6 +17,7 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('', 'User\UserController@index')->name('.index');
             Route::get('patients', 'User\UserController@getPatients')->name('.getPatients');
             Route::get('create','User\UserController@create')->name('.create');
+            Route::get('createPatient','User\UserController@createPatient')->name('.createPatient');
             Route::post('insert', 'User\UserController@insert')->name('.insert');
             Route::get('{id}', 'User\UserController@findById')->name('.find');
             Route::put('', 'User\UserController@update')->name('.update');

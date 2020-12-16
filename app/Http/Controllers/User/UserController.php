@@ -50,6 +50,14 @@ class UserController extends Controller
     }
 
     /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function createPatient()
+    {
+        return view('users.createPatient');
+    }
+
+    /**
      * @param InsertUser $request
      * @return \Illuminate\Http\RedirectResponse
      */

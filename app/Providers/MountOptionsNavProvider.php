@@ -28,7 +28,7 @@ class MountOptionsNavProvider extends ServiceProvider
     {
         $events->listen(BuildingMenu::class, function (BuildingMenu $event) {
             $user = Auth::user();
-            if($user->user_type_id === UserConstant::ADMIN || $user->user_type_id === UserConstant::DOCTOR){
+            if($user->user_type_id === UserConstant::ADMIN){
                 $event->menu->add(
                     [
                         'text' => 'search',
@@ -52,6 +52,48 @@ class MountOptionsNavProvider extends ServiceProvider
                             [
                                 'text' => 'Inserir usuário',
                                 'url'  => 'user/create'
+                            ]
+                        ]
+                    ],
+                    ['header' => 'Gerenciamento de pacientes'],
+                    [
+                        'text' => 'Pacientes',
+                        'icon' => 'fa fa-cogs',
+                        'submenu' => [
+                            [
+                                'text' => 'Inserir dados',
+                                'url'  => 'timeline'
+                            ],
+                            [
+                                'text' => 'Listagem de pacientes',
+                                'url'  => 'user/patients'
+                            ],
+                        ]
+                    ]
+
+                );
+                return true;
+            }
+            if($user->user_type_id === UserConstant::DOCTOR){
+                $event->menu->add(
+                    [
+                        'text' => 'search',
+                        'search' => false,
+                        'topnav' => false,
+                    ],
+                    [
+                        'text'        => 'Incio',
+                        'url'         => 'home',
+                        'icon'        => 'fas fa-fw fa-home',
+                    ],
+                    ['header' => 'Usuários'],
+                    [
+                        'text' => 'Gerenciar usuários',
+                        'icon' => 'fas fa-fw fa-user',
+                        'submenu' => [
+                            [
+                                'text' => 'Inserir paciente',
+                                'url'  => 'user/createPatient'
                             ]
                         ]
                     ],
